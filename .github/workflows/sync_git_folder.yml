@@ -26,6 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
+
+      # check the auth first
+      - name: Verify authentication
+        run: databricks current-user me
+      
       - name: Update git folder
         # Set your workspace path and branch name here
         run: databricks repos update /Home/databricks --branch main
