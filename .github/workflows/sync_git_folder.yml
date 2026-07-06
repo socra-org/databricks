@@ -32,9 +32,9 @@ jobs:
       - name: Verify authentication
         run: databricks current-user me
 
-      - name: List repos
-        run: databricks repos list
+      # - name: List repos
+      #   run: databricks repos list
       
       - name: Update git folder
         # Set your workspace path and branch name here
-        run: databricks repos update /Home/databricks --branch main
+        run: databricks repos update /Workspace/Users/socrates.sullivan@gmail.com/databricks --branch main
