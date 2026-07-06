@@ -31,6 +31,9 @@ jobs:
       # check the auth first
       - name: Verify authentication
         run: databricks current-user me
+
+      - name: List repos
+        run: databricks repos list
       
       - name: Update git folder
         # Set your workspace path and branch name here
